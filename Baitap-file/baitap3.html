@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+
+<head>
+    <!-- Meta tags -->
+    <meta charset="utf8">
+
+    <!-- Title tag -->
+    <title>bai tap 3</title>
+
+</head>
+
+<body>
+    <script>
+       let arrStyle=["Jazz","Blues"];
+       //a,Thêm phần tử “Rock-n-Roll” vào cuối mảng
+        arrStyle.push=("Rock-n-Roll");
+        console.log(arrStyle);
+
+        //b,Thay thế phần tử nằm chính giữa mảng bằng “Classics” nếu mảng
+//có tổng số phần tử là lẻ
+        console.log("Thay thế phần tử nằm chính giữa mảng bằng Classics");
+        for(var i=0;i<arrStyle.length;i++){
+            if(arrStyle[i]%2!=0){
+                arrStyle[i]="Classics";
+                
+            }console.log(arrStyle);
+        }
+
+        //c.Xóa phần tử đầu tiên của mảng và hiển thị mảng
+        console.log("Xóa phần tử đầu tiên của mảng và hiển thị mảng");
+        arrStyle.shift();
+        console.log(arrStyle);
+
+        //d.Thêm phần tử “Rap” và “Reggae” vào đầu mảng và hiển thị
+        console.log("Thêm phần tử “Rap” và “Reggae” vào đầu mảng và hiển thị");
+        arrStyle.unshift("Rap","Reggae");
+        console.log(arrStyle);
+    </script>
+</body>
+
+</html>

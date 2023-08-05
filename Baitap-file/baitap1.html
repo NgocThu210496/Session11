@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+
+<head>
+    <!-- Meta tags -->
+    <meta charset="utf8">
+
+    <!-- Title tag -->
+    <title>bai tap 1</title>
+
+</head>
+
+<body>
+    <script>
+        var arrayInt = [];
+        //a.Nhập 5 giá trị số nguyên cho mảng từ bàn phím
+        for (var i = 1; i <= 5; i++) {
+            // c1: arrayInt[i]=Number(prompt("nhap gia tri phan tu" + ( i+1)));
+            arrayInt.push(Number(prompt("nhap gia tri phan tu")));
+        }
+        //b.Hiển thị giá trị các phần tử của mảng
+        console.log("cac gia tri cua mang la " + arrayInt);
+
+        //c.In các phần tử có giá trị chẵn và tính tổng
+        console.log("phan tu co gia tri chan trong mang ");
+        var sumChan = 0;
+
+        for (i = 0; i < arrayInt.length; i++) {
+            if (arrayInt[i] % 2 == 0) {
+                sumChan = sumChan + arrayInt[i];
+                console.log(arrayInt[i]);
+            }
+        } console.log("tong cua gia tri phan tu chan la " + sumChan);
+
+        //d.In các phần tử có chỉ số lẻ và tính tổng
+        console.log("phan tu co gia tri le trong mang ");
+        var sumLe = 0;
+        for (i = 0; i < arrayInt.length; i++) {
+            if (arrayInt[i] % 2 != 0) {
+                sumLe = sumLe + arrayInt[i];
+                console.log(arrayInt[i]);
+            }
+        }
+        console.log("tong cua gia tri phan tu le la " + sumLe);
+
+        //e.In giá trị các phần tử trong mảng là số nguyên tố
+        //kiem ta so nguyen to
+        console.log("các số nguyên tố trong mảng là: ");
+        for (i = 0; i < arrayInt.length; i++) {
+            let isPrime = true;
+            if (arrayInt[i] >= 2) {
+                for (j = 2; j < arrayInt[i]; j++) {
+                    if (arrayInt[i] % j == 0) {
+                        isPrime = false;
+                        break;
+                    }
+                }
+                if (isPrime) {
+                    console.log(arrayInt[i]);
+                }
+            }
+        }
+        //f.In các phần tử có giá trị là max hoặc min
+        console.log("In các phần tử có giá trị là max va min trong mảng là: ");
+        var max=arrayInt[0];
+        var min=arrayInt[0];
+        for(i=0;i<arrayInt.length;i++){
+            if(max<arrayInt[i]){
+                max=arrayInt[i];
+            }else if(min>arrayInt[i]) {
+                min=arrayInt[i];
+            }  
+        }console.log(" so lon nhat trong mang la " + max);
+        console.log(" so be nhat trong mang la " + min);
+
+        //g.Sắp xếp mảng giảm dần và in giá trị các phần tử mảng sau khi sắp xếp 
+        //c1 
+        console.log("Sắp xếp mảng giảm dần");
+        arrayInt.sort((a,b)=>b-a);
+        console.log(arrayInt);
+
+        //c2
+        //b1: khai bao gia tri
+        //var arrayInt=[];
+        //nhap 5 gia tri vao mang
+        for(let i=0;i<5;i++){
+            arrayInt.push (Number(prompt("Nhap vao gia tri" + (i+1))));
+        }
+        //in mang sau khi nhap
+        console.log("mang sau khi nhap la: " + arrayInt);
+        //b4 sap xep
+        //4.1: sap xep thuat toan selection DESC
+        for(let i=0;i<arrayInt.length-1;i++){
+            //so sanh phan tu arrayInt[i] voi cac phan tu dung sau no
+            for(let j=i+1;j<arrayInt.length;j++){
+                if(arrayInt[i]<arrayInt[j]){
+                    let temp=arrayInt[i];
+                    arrayInt[i]=arrayInt[j];
+                    arrayInt[j]=temp;
+                }
+            }
+        }console.log("mang sau khi sap xep giam dan: ",arrayInt);
+        
+
+        //h.Nhập vào một số nguyên và thống kê có bao nhiêu phần tử có giá trị như vậy
+        var numberSoSanh=Number(prompt("nhap mot so nguyen"));
+        var thongKe=0;
+        for(var i= 0; i<arrayInt.length; i++){
+            if(numberSoSanh==arrayInt[i]){
+                thongKe++;
+            }
+        } console.log("số phần tử giống " + numberSoSanh +  " là: " +  thongKe);
+
+
+
+
+    </script>
+</body>
+
+</html>

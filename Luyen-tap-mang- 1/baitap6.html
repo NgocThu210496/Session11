@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+
+<head>
+    <!-- Meta tags -->
+    <meta charset="utf8">
+
+    <!-- Title tag -->
+    <title>bai tap 6</title>
+
+</head>
+
+<body>
+    <script>
+     //Bài 6: Viết chương trình khởi tạo nhập vào một mảng số nguyên gồm 10 phần tử. 
+    // Nhập phần tử số nguyên và tìm xem số đó có nằm trong mảng số nguyên không?
+     // Nếu có thuộc mảng số nguyên thì in ra "Number X is in the array"
+     //  còn lại in ra "Number X is not in the array".
+
+     let arrInt=[];
+        for(let i=0;i<5;i++){
+            arrInt.push(Number(prompt("Nhap vao gia tri cua mang " )));
+        }console.log(arrInt);
+        
+        for(let i=0;i<arrInt.length;i++){
+            let n=(Number(prompt("Nhap vao gia tri cua n " )));
+            if(n==arrInt[i]){
+                console.log("Number " +  n + " is in the array");
+                
+            }else{
+                console.log("Number " +  n + " is not in the array");
+               
+            }
+        }
+    </script>
+</body>
+
+</html>

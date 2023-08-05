@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+
+<head>
+    <!-- Meta tags -->
+    <meta charset="utf8">
+
+    <!-- Title tag -->
+    <title> mảng 2 chiều</title>
+
+</head>
+
+<body>
+    <script>
+        //khai báo mảng 2 chiều số nguyên arrInt
+        let numberRow=Number(prompt("Hãy nhập số dòng:"));
+        let numberCloum=Number(prompt("Hãy nhập số cột:"));
+        var arrInt=[numberRow,numberCloum];
+        
+        //Nhập giá trị các phần tử của mảng từ bàn phím
+        for (var i = 0; i < numberRow; i++) {
+            arrInt[i] = [];
+            for (var j = 0; j < numberCloum; j++) {
+                var number = Number(prompt("Nhập giá trị phần tử thứ [" + i + "][" + j + "]:"));
+                arrInt[i][j] = number;
+            }
+        }
+        //b. In giá trị các phần tử của mảng1
+        console.log("Các giá trị phần tử của mảng là", arrInt);
+        
+        //c. In giá trị các phần tử nằm trên đường biên (Coi mảng 2 chiều là ma trận)
+        console.log("Các giá trị nằm trên đường biên là:");
+        for(i=0;i<numberRow;i++){
+            for(j=0;j<numberCloum;j++){
+                if(i===0||i===numberRow-1||j===0||j===numberCloum-1){
+                    console.log(arrInt[i][j]);
+                }
+            }
+        }
+
+        //d.In giá trị các phần tử nằm trên đường chéo chính và phụ
+        console.log("In giá trị các phần tử nằm trên đường chéo chinh là:");
+        //let principalDiagonal;
+        //so dong = so cot
+        for(i=0;i<numberRow;i++){
+            for(j=0;j<numberCloum;j++){
+                if(i===j){
+                    console.log(arrInt[i][j]);
+                }
+            }
+        }
+        console.log("In giá trị các phần tử nằm trên đường phu là:");
+        for(i=0;i<numberRow;i++){
+            for(j=0;j<numberCloum;j++){
+                if(i+j==numberRow-1){
+
+                    console.log(arrInt[i][j]);
+                }
+            }
+        }
+
+        //e.Sắp xếp mảng tăng dần theo từng dòng
+        //c1
+        console.log("Sắp xếp mảng tăng dần theo từng dòng:");
+        for(i=0;i<numberRow;i++){
+            arrInt[i].sort((a,b)=>a-b);
+            console.log(arrInt);
+        }
+
+        //c2
+        // //duyet tung dong de sap xep tang dan
+        // for(i=0;i<numberRow-1;i++){
+        //     for(j=i+1;j<numberCloum;j++){
+        //         if(arrInt[i]>[j]){
+        //             let temp=arrInt[i];
+        //             arrayInt[i]=arrayInt[j];
+        //             arrayInt[j]=temp;
+        //         }
+        //     }
+        // }console.log("sap xep cac dong tang dan: " + arrInt[i][j]);
+
+
+        
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+
+<head>
+    <!-- Meta tags -->
+    <meta charset="utf8">
+
+    <!-- Title tag -->
+    <title>demo</title>
+
+</head>
+
+<body>
+    <script>
+       
+        //b1: khai bao gia tri
+        let arrNumber=[];
+        //nhap 5 gia tri vao mang
+        for(let i=0;i<5;i++){
+            arrNumber.push (Number(prompt("Nhap vao gia tri" + (i+1))));
+        }
+        //in mang sau khi nhap
+        console.log("mang sau khi nhap la: " + arrNumber);
+        //b4 sap xep
+        //4.1: sap xep thuat toan selection DESC
+        for(let i=0;i<arrNumber.length-1;i++){
+            //so sanh phan tu arrNumber[i] voi cac phan tu dung sau no
+            for(let j=i+1;j<arrNumber.length;j++){
+                if(arrNumber[i]<arrNumber[j]){
+                    let temp=arrNumber[i];
+                    arrNumber[i]=arrNumber[j];
+                    arrNumber[j]=temp;
+                }
+            }
+        }console.log("mang sau khi sap xep giam dan: ",arrNumber);
+        
+
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

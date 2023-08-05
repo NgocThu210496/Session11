@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+
+<head>
+    <!-- Meta tags -->
+    <meta charset="utf8">
+
+    <!-- Title tag -->
+    <title>bai tap 4</title>
+
+</head>
+
+<body>
+    <script>
+       
+        //b1: khai bao gia tri mang 1 chieu
+        let arrInt=[];
+        //a. Cho phép người dùng nhập các giá trị của mảng bằng hàm prompt và
+         //lưu trữ giá trị trong mảng cho đến khi người dùng nhập một giá trị không phải là số, 
+         //một chuỗi trống hoặc nhấn “Cancel”
+        do{
+            let value=+prompt("nhap gia tri");
+            if(value=="" || isNaN(value) || value==null){
+                break;
+            }else{
+                arrInt.push(+value);
+            }
+        }while(true);
+        
+        console.log("mang sau khi nhap la: " + arrInt);
+        
+        //b.Tính tổng các giá trị của mảng
+       
+        let sum=0;
+       
+        for(let i=0;i<arrInt.length;i++){
+            sum=sum+arrInt[i];
+            
+        }console.log("tổng các giá trị của mảng " + sum);
+    
+        //in ra phần tử có giá trị max - min 
+        //(không và có sử dụng hàm Math.max và Math.min)
+
+        let max = arrInt[0];
+        let min = arrInt[0];
+        for (var i = 1; i < arrInt.length; i++) {
+            if (arrInt[i] > max) {
+                max = arrInt[i];
+            }else if (arrInt[i]<min){
+                min=arrInt[i]
+            }
+            else{
+                break;
+            }
+        }console.log("gia tri max trong mang : " + max);
+        console.log("gia tri min trong mang : " + min);
+    
+    </script>
+</body>
+
+</html>
